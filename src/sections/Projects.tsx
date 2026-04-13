@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
-import { projectsData, Project } from '@/data/projects';
-import { ExternalLink, Folder } from 'lucide-react';
+import { projectsData } from '@/data/projects';
+import { ExternalLink, Folder, Play, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = [
@@ -25,7 +26,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 px-4 bg-steel-50/50 dark:bg-steel-900/20">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle subtitle="A selection of my academic and personal projects in civil engineering and technology.">
+        <SectionTitle subtitle="A selection of my academic and personal projects in civil engineering and technology. Click a project to see the full details and showcase.">
           Featured Projects
         </SectionTitle>
         
@@ -59,43 +60,52 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="h-full flex flex-col group">
-                  <div className="aspect-video bg-steel-100 dark:bg-steel-700 relative overflow-hidden">
-                    {/* Placeholder for project image */}
-                    <div className="absolute inset-0 flex items-center justify-center text-steel-300 dark:text-steel-600">
-                      <Folder size={48} />
-                    </div>
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-primary-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                      {project.fileLink && (
-                        <a href={project.fileLink} className="p-3 bg-white rounded-full text-primary-900 hover:scale-110 transition-transform">
-                          <ExternalLink size={20} />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className="p-6 flex-grow flex flex-col">
-                    <div className="flex justify-between items-start mb-4">
-                      <span className="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
-                        {project.type}
-                      </span>
-                    </div>
-                    <h4 className="text-xl font-bold text-steel-900 dark:text-white mb-3">
-                      {project.title}
-                    </h4>
-                    <p className="text-steel-600 dark:text-steel-400 text-sm mb-6 flex-grow">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tools.map(tool => (
-                        <span key={tool} className="px-2.5 py-1 bg-steel-100 dark:bg-steel-700/50 text-steel-600 dark:text-steel-300 rounded text-[10px] font-bold uppercase">
-                          {tool}
+                <Link href={`/projects/${project.category}`}>
+                  <Card className="h-full flex flex-col group cursor-pointer hover:border-primary-500 transition-all overflow-hidden">
+                    <div className="aspect-video bg-steel-100 dark:bg-steel-700 relative overflow-hidden">
+                      {/* Placeholder for project image */}
+                      <div className="absolute inset-0 flex items-center justify-center text-steel-300 dark:text-steel-600">
+                        <Folder size={48} />
+                      </div>
+                      
+                      {/* Status/Type Badge */}
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-white/90 dark:bg-steel-900/90 backdrop-blur-sm rounded-full text-[10px] font-black uppercase tracking-tighter text-primary-600 shadow-sm">
+                          {project.type}
                         </span>
-                      ))}
+                      </div>
+
+                      {/* View Details Overlay */}
+                      <div className="absolute inset-0 bg-primary-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <div className="bg-white text-primary-600 px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform shadow-xl">
+                          VIEW PROJECT DETAILS
+                          <ArrowRight size={16} />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                    
+                    <div className="p-6 flex-grow flex flex-col">
+                      <h4 className="text-xl font-bold text-steel-900 dark:text-white mb-3 group-hover:text-primary-600 transition-colors">
+                        {project.title}
+                      </h4>
+                      <p className="text-steel-600 dark:text-steel-400 text-sm mb-6 flex-grow line-clamp-3">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tools.slice(0, 3).map(tool => (
+                          <span key={tool} className="px-2.5 py-1 bg-steel-100 dark:bg-steel-700/50 text-steel-600 dark:text-steel-300 rounded text-[10px] font-bold uppercase">
+                            {tool}
+                          </span>
+                        ))}
+                        {project.tools.length > 3 && (
+                          <span className="px-2.5 py-1 text-steel-400 text-[10px] font-bold uppercase">
+                            +{project.tools.length - 3} MORE
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>

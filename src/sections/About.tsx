@@ -31,6 +31,21 @@ export default function About() {
               Beyond traditional engineering, I am deeply involved in AI training and coding, exploring how machine learning can optimize infrastructure maintenance and resource management.
             </p>
             
+            <div className="pt-4 p-6 bg-white dark:bg-steel-800 rounded-xl border border-steel-100 dark:border-steel-700 shadow-sm">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="p-2 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg">
+                  <LucideIcons.Building2 size={24} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-steel-900 dark:text-white">Internship at PWD</h4>
+                  <p className="text-xs text-steel-500">Public Works Department • 2024</p>
+                </div>
+              </div>
+              <p className="text-sm text-steel-600 dark:text-steel-400">
+                Gained practical experience in public infrastructure projects and maintenance workflows during my tenure at the Public Works Department.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-2 gap-4 pt-4">
               {['Civil Engineering', 'CAD/Design', 'Structural Analysis', 'AI Training', 'Coding', 'AI Productivity'].map((strength) => (
                 <div key={strength} className="flex items-center gap-2">

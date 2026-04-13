@@ -3,7 +3,8 @@
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import { aiData } from '@/data/ai';
-import { Cpu, Database, Activity, Globe } from 'lucide-react';
+import Link from 'next/link';
+import { Cpu, Database, Activity, Globe, FileCode, Play, ArrowRight } from 'lucide-react';
 
 export default function AITraining() {
   return (
@@ -12,6 +13,16 @@ export default function AITraining() {
         <SectionTitle subtitle="Exploring the intersection of artificial intelligence and civil engineering.">
           AI Training & Projects
         </SectionTitle>
+
+        <div className="mb-12 flex justify-center">
+          <Link 
+            href="/projects/ai-projects"
+            className="group flex items-center gap-3 px-8 py-4 bg-primary-600 text-white rounded-2xl font-bold hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/25"
+          >
+            OPEN AI PROJECT SHOWCASE
+            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {aiData.map((item, index) => (
@@ -47,8 +58,8 @@ export default function AITraining() {
                     </div>
                   </div>
                   
-                  {item.demoLink && (
-                    <div className="mt-8">
+                  <div className="flex flex-wrap gap-4 mt-8">
+                    {item.demoLink && item.demoLink !== '#' && (
                       <a 
                         href={item.demoLink}
                         className="inline-flex items-center gap-2 text-sm font-bold text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
@@ -56,8 +67,29 @@ export default function AITraining() {
                         <Globe size={16} />
                         VIEW LIVE DEMO
                       </a>
-                    </div>
-                  )}
+                    )}
+                    
+                    {item.modelLink && (
+                      <a 
+                        href={item.modelLink}
+                        className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
+                      >
+                        <FileCode size={16} />
+                        DOWNLOAD MODEL
+                      </a>
+                    )}
+
+                    {item.videoLinks && item.videoLinks.map((link, idx) => (
+                      <a 
+                        key={idx}
+                        href={link.url}
+                        className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                      >
+                        <Play size={16} />
+                        {link.label.toUpperCase()}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </Card>
