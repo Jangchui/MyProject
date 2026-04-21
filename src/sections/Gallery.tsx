@@ -9,12 +9,13 @@ const galleryItems = [
     id: 1, 
     title: 'First Revit Project - Architectural Design', 
     category: 'Modeling',
-    image: '/assets/projects/First Revit Project/render.jpg' 
+    image: 'assets/projects/revit-design/render.jpg' 
   },
   { 
     id: 2, 
     title: 'Traffic Vehicle Counting - AI Output', 
-    category: 'AI Training' 
+    category: 'AI Training',
+    image: 'https://lh3.googleusercontent.com/d/1nm0_sKiMmRLV10MOlKjHW2cTLScLt04v'
   },
   { 
     id: 3, 

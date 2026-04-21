@@ -16,7 +16,7 @@ export const aiData: AIItem[] = [
     purpose: 'Real-time vehicle detection and counting for traffic flow monitoring and density analysis.',
     dataset: 'Custom Traffic Video Dataset',
     results: 'High precision counting with YOLOv8 optimization.',
-    modelLink: '/assets/ai-training/Traffic Vehicle Counting/Model/best.pt',
+    modelLink: 'https://drive.google.com/file/d/1iy2DANKry95xKuOPTgERMrYvw2Vae0E1/view?usp=sharing',
     videoLinks: [
       { label: 'Source Video', url: 'https://drive.google.com/file/d/1fdzPjHsaXD9W16qy0SHVr9CJZHD_ZAh5/view?usp=drivesdk' },
       { label: 'Output Results', url: 'https://drive.google.com/file/d/1VHEnLP7KV0ygEgLoPvCXUvyR5I6oOhuS/view?usp=drivesdk' }

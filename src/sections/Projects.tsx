@@ -63,10 +63,18 @@ export default function Projects() {
                 <Link href={`/projects/${project.category}`}>
                   <Card className="h-full flex flex-col group cursor-pointer hover:border-primary-500 transition-all overflow-hidden">
                     <div className="aspect-video bg-steel-100 dark:bg-steel-700 relative overflow-hidden">
-                      {/* Placeholder for project image */}
-                      <div className="absolute inset-0 flex items-center justify-center text-steel-300 dark:text-steel-600">
-                        <Folder size={48} />
-                      </div>
+                      {/* Project Image */}
+                      {project.image ? (
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center text-steel-300 dark:text-steel-600">
+                          <Folder size={48} />
+                        </div>
+                      )}
                       
                       {/* Status/Type Badge */}
                       <div className="absolute top-4 left-4">

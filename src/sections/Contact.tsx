@@ -2,7 +2,7 @@
 
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
-import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
@@ -27,23 +27,13 @@ export default function Contact() {
               </p>
               
               <div className="space-y-6">
-                <a href="mailto:your.email@example.com" className="flex items-center gap-4 group">
+                <a href="mailto:23101001@nitmanipur.ac.in" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 bg-steel-800 rounded-full flex items-center justify-center group-hover:bg-primary-600 transition-colors">
                     <Mail size={20} />
                   </div>
                   <div>
                     <span className="block text-xs font-bold uppercase text-steel-500">Email Me</span>
-                    <span className="text-lg">your.email@example.com</span>
-                  </div>
-                </a>
-                
-                <a href="tel:+1234567890" className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-steel-800 rounded-full flex items-center justify-center group-hover:bg-primary-600 transition-colors">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <span className="block text-xs font-bold uppercase text-steel-500">Call Me</span>
-                    <span className="text-lg">+123 456 7890</span>
+                    <span className="text-lg text-steel-100 break-all">23101001@nitmanipur.ac.in</span>
                   </div>
                 </a>
               </div>

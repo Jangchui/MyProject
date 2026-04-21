@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { Project } from '@/data/projects';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
-import { ArrowLeft, Play, Database, Cpu, Download, FileCode, ShieldCheck, X, MonitorPlay, Building2, Layers, Image as ImageIcon } from 'lucide-react';
+import { ArrowLeft, Play, Database, Cpu, Download, FileCode, ShieldCheck, X, MonitorPlay, Building2, Layers, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -59,10 +59,10 @@ export default function CategoryPageClient({ category, categoryName, filteredPro
                 Verified YOLOv8 Model
               </div>
               <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Traffic Vehicle Counting <br/>Neural Network Model</h3>
-              <p className="text-primary-100 text-lg mb-10 leading-relaxed">Download the optimized <strong>best.pt</strong> weight file. Trained for real-time vehicle detection and density analysis.</p>
+              <p className="text-primary-100 text-lg mb-10 leading-relaxed">Access the optimized <strong>best.pt</strong> weight file. Trained for real-time vehicle detection and density analysis.</p>
               <div className="flex flex-wrap gap-4">
-                <a href="/assets/ai-training/Traffic Vehicle Counting/Model/best.pt" download className="flex items-center gap-3 px-8 py-4 bg-white text-primary-700 rounded-2xl font-black hover:bg-primary-50 transition-all shadow-xl hover:scale-105">
-                  <Download size={24} /> DOWNLOAD MODEL (.pt)
+                <a href="https://drive.google.com/file/d/1iy2DANKry95xKuOPTgERMrYvw2Vae0E1/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 bg-white text-primary-700 rounded-2xl font-black hover:bg-primary-50 transition-all shadow-xl hover:scale-105">
+                  <ExternalLink size={24} /> VIEW MODEL ON DRIVE
                 </a>
               </div>
             </div>
@@ -84,10 +84,10 @@ export default function CategoryPageClient({ category, categoryName, filteredPro
                 Full BIM Model
               </div>
               <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Architectural & Structural <br/>BIM Design Project</h3>
-              <p className="text-emerald-50 text-lg mb-10 leading-relaxed">Download the complete <strong>MYDESIGN.rvt</strong> project file. Includes detailed floor plans, structural integration, and high-quality renders.</p>
+              <p className="text-emerald-50 text-lg mb-10 leading-relaxed">Access the complete <strong>MYDESIGN.rvt</strong> project file. Includes detailed floor plans, structural integration, and high-quality renders.</p>
               <div className="flex flex-wrap gap-4">
-                <a href="/assets/projects/First Revit Project/MYDESIGN.rvt" download className="flex items-center gap-3 px-8 py-4 bg-white text-emerald-700 rounded-2xl font-black hover:bg-emerald-50 transition-all shadow-xl hover:scale-105">
-                  <Download size={24} /> DOWNLOAD PROJECT (.rvt)
+                <a href="https://drive.google.com/file/d/1GU528h4PeodOCKNN3eRbYsmjXYyfLuw4/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 bg-white text-emerald-700 rounded-2xl font-black hover:bg-emerald-50 transition-all shadow-xl hover:scale-105">
+                  <ExternalLink size={24} /> VIEW PROJECT ON DRIVE
                 </a>
               </div>
             </div>
@@ -120,8 +120,8 @@ export default function CategoryPageClient({ category, categoryName, filteredPro
                         {category === 'ai-projects' ? <Cpu size={24} /> : <Building2 size={24} />}
                       </div>
                       {project.fileLink && (
-                        <a href={project.fileLink} download className="p-3 bg-steel-50 dark:bg-steel-900 text-steel-400 hover:text-primary-600 rounded-xl transition-colors flex items-center gap-2 text-xs font-black">
-                          <Download size={20} /> FILE
+                        <a href={project.fileLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-steel-50 dark:bg-steel-900 text-steel-400 hover:text-primary-600 rounded-xl transition-colors flex items-center gap-2 text-xs font-black">
+                          <ExternalLink size={20} /> VIEW
                         </a>
                       )}
                     </div>

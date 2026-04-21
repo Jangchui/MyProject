@@ -18,7 +18,8 @@ export const projectsData: Project[] = [
     tools: ['YOLOv8', 'Python', 'OpenCV'],
     type: 'AI Training',
     category: 'ai-projects',
-    fileLink: '/assets/ai-training/Traffic Vehicle Counting/Model/best.pt',
+    image: 'https://lh3.googleusercontent.com/d/1nm0_sKiMmRLV10MOlKjHW2cTLScLt04v',
+    fileLink: 'https://drive.google.com/file/d/1iy2DANKry95xKuOPTgERMrYvw2Vae0E1/view?usp=sharing',
     videoLinks: [
       { label: 'Video 1', url: 'https://drive.google.com/file/d/1fdzPjHsaXD9W16qy0SHVr9CJZHD_ZAh5/view?usp=drivesdk' },
       { label: 'Video 1 Output', url: 'https://drive.google.com/file/d/1VHEnLP7KV0ygEgLoPvCXUvyR5I6oOhuS/view?usp=drivesdk' },
@@ -37,9 +38,8 @@ export const projectsData: Project[] = [
     tools: ['Revit'],
     type: 'Revit/BIM',
     category: 'revit-bim',
-    image: '/assets/projects/First Revit Project/render.jpg',
-    // Hosted on Google Drive to avoid GitHub 100MB limit
-    fileLink: 'https://drive.google.com/file/d/your-google-drive-id-here/view?usp=sharing',
+    image: 'assets/projects/revit-design/render.jpg',
+    fileLink: 'https://drive.google.com/file/d/1GU528h4PeodOCKNN3eRbYsmjXYyfLuw4/view?usp=sharing',
     videoLinks: [
       { label: 'Architecture Walkthrough', url: 'https://drive.google.com/file/d/1fdzPjHsaXD9W16qy0SHVr9CJZHD_ZAh5/view?usp=drivesdk' },
       { label: 'Structural Model Preview', url: 'https://drive.google.com/file/d/1VHEnLP7KV0ygEgLoPvCXUvyR5I6oOhuS/view?usp=drivesdk' }

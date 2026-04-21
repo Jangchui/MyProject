@@ -50,7 +50,7 @@ Edit `src/data/projects.ts`. Add a new object to the `projectsData` array:
   tools: ['Tool 1', 'Tool 2'],
   type: 'Project Type',
   category: 'civil-design', // Must match one of the categories
-  image: '/assets/projects/your-image.jpg',
+  image: 'assets/projects/your-image.jpg',
   fileLink: '#'
 }
 ```

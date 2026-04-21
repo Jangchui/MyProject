@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import { aiData } from '@/data/ai';
 import Link from 'next/link';
-import { Cpu, Database, Activity, Globe, FileCode, Play, ArrowRight } from 'lucide-react';
+import { Cpu, Database, Activity, Globe, FileCode, Play, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function AITraining() {
   return (
@@ -72,10 +72,12 @@ export default function AITraining() {
                     {item.modelLink && (
                       <a 
                         href={item.modelLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
                       >
-                        <FileCode size={16} />
-                        DOWNLOAD MODEL
+                        <ExternalLink size={16} />
+                        VIEW MODEL
                       </a>
                     )}
 

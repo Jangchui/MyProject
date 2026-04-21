@@ -2,7 +2,7 @@
 
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
-import { FileText, Award, Download } from 'lucide-react';
+import { FileText, Award, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const certifications = [
@@ -10,49 +10,49 @@ const certifications = [
     title: 'PWD Internship Certificate',
     issuer: 'Public Works Department',
     date: '2024',
-    file: '/assets/Document/Pwd_Intenship_Certificate.pdf',
+    file: 'https://drive.google.com/file/d/1v39dYy5wuyAAAgwiV9IaFGWTH4o6_zBn/view?usp=drive_link',
     type: 'Internship'
   },
   {
     title: '6-Month Computer Certificate',
     issuer: 'Computer Training Center',
     date: '2023',
-    file: '/assets/Document/6MonthComputerCertificate.pdf',
+    file: 'https://drive.google.com/file/d/1q_EhtRnz_9Tn9zY6ifQIgGh--r-i9p67/view?usp=drive_link',
     type: 'Certificate'
   },
   {
     title: '3-Day Training Certificate',
     issuer: 'Technical Workshop',
     date: '2023',
-    file: '/assets/Document/3DayTraining.pdf',
+    file: 'https://drive.google.com/file/d/19ta3CVdR4Fjeh_xl-ClfZq8QwRUOzgxX/view?usp=drive_link',
     type: 'Training'
   },
   {
     title: '2nd Year Marksheet',
     issuer: 'University',
     date: '2024',
-    file: '/assets/Document/2nd_year_Marksheet.pdf',
+    file: 'https://drive.google.com/file/d/1_oeb7atUCJ_Mv-FC9cG8NLtE1nR4wP1y/view?usp=drive_link',
     type: 'Academic'
   },
   {
     title: '1st Year Marksheet',
     issuer: 'University',
     date: '2023',
-    file: '/assets/Document/1st_year_mark sheet .pdf',
+    file: 'https://drive.google.com/file/d/1dGGBzWS70pKtmVqZXyNXw6vzNx9MeR-h/view?usp=drive_link',
     type: 'Academic'
   },
   {
     title: 'Class 12 Marksheet',
     issuer: 'State Board',
     date: '2022',
-    file: '/assets/Document/class 12_Marksheet.pdf',
+    file: 'https://drive.google.com/file/d/1vpETpI8Q4PTSJy_9xoDY9NaZ_hBVG0AC/view?usp=drive_link',
     type: 'Academic'
   },
   {
     title: 'Class 10 Marksheet',
     issuer: 'State Board',
     date: '2020',
-    file: '/assets/Document/Class10_Marksheet.pdf',
+    file: 'https://drive.google.com/file/d/1E9wgIK-jorLJXvHRAepa8KEcm3m--24S/view?usp=drive_link',
     type: 'Academic'
   }
 ];
@@ -61,7 +61,7 @@ export default function Certifications() {
   return (
     <section id="certifications" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <SectionTitle subtitle="Official records of my academic performance and professional training.">
+        <SectionTitle subtitle="Official records of my academic performance and professional training accessed via Google Drive.">
           Certifications & Documents
         </SectionTitle>
         
@@ -94,8 +94,8 @@ export default function Certifications() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-bold text-primary-600 hover:text-primary-700 transition-colors"
                   >
-                    <Download size={16} />
-                    VIEW DOCUMENT
+                    <ExternalLink size={16} />
+                    VIEW ON DRIVE
                   </a>
                 </div>
               </Card>

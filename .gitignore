@@ -3,7 +3,7 @@ node_modules/
 node_modules_old/
 
 # Large Files
-public/assets/projects/First Revit Project/MYDESIGN.rvt
+public/assets/projects/revit-design/MYDESIGN.rvt
 
 # next.js
 .next/
